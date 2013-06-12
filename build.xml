@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project YourChatConsole with Jar-in-Jar Loader">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="C:/Users/Michi/workspace/YourChatConsole/archive/ycconsole.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="de.yovi.console.Main"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ commons-codec-1.6.jar commons-logging-1.1.1.jar fluent-hc-4.2.3.jar httpclient-4.2.3.jar httpclient-cache-4.2.3.jar httpcore-4.2.2.jar httpmime-4.2.3.jar json_org.jar slf4j-log4j12-1.7.2.jar slf4j-api-1.7.2.jar"/>
+            </manifest>
+            <zipfileset src="jar-in-jar-loader.zip"/>
+            <fileset dir="C:/Users/Michi/workspace/YourChatConsole/bin"/>
+            <zipfileset dir="C:\Users\Michi\workspace\YourChatConsole\lib" includes="commons-codec-1.6.jar"/>
+            <zipfileset dir="C:\Users\Michi\workspace\YourChatConsole\lib" includes="commons-logging-1.1.1.jar"/>
+            <zipfileset dir="C:\Users\Michi\workspace\YourChatConsole\lib" includes="fluent-hc-4.2.3.jar"/>
+            <zipfileset dir="C:\Users\Michi\workspace\YourChatConsole\lib" includes="httpclient-4.2.3.jar"/>
+            <zipfileset dir="C:\Users\Michi\workspace\YourChatConsole\lib" includes="httpclient-cache-4.2.3.jar"/>
+            <zipfileset dir="C:\Users\Michi\workspace\YourChatConsole\lib" includes="httpcore-4.2.2.jar"/>
+            <zipfileset dir="C:\Users\Michi\workspace\YourChatConsole\lib" includes="httpmime-4.2.3.jar"/>
+            <zipfileset dir="C:\Users\Michi\workspace\YourChatConsole\lib" includes="json_org.jar"/>
+            <fileset dir="C:/Users/Michi/workspace/JCurses/bin"/>
+            <zipfileset dir="C:\Users\Michi\workspace\JCurses\lib" includes="slf4j-log4j12-1.7.2.jar"/>
+            <zipfileset dir="C:\Users\Michi\workspace\JCurses\lib" includes="slf4j-api-1.7.2.jar"/>
+        </jar>
+    </target>
+</project>
